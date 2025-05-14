@@ -4,7 +4,7 @@ services:
   web:
     build: .
     ports:
-      - "5000:5000"
+      - '5080:5080'
     depends_on:
       - redis
     volumes:
@@ -14,4 +14,4 @@ services:
     image: redis:alpine
     volumes:
       - ./data/redis:/data
-    command: ["redis-server", "--appendonly", "yes"]
+    command: ['redis-server', '--appendonly', 'yes']
