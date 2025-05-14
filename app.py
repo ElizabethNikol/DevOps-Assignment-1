@@ -4,7 +4,7 @@ import redis
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-redis_client = redis.StrictRedis(host='localhost', port=6379, db=0, decode_responses=True)
+redis_client = redis.StrictRedis(host='redis', port=6379, db=0, decode_responses=True)
 
 @app.route('/')
 def home():
@@ -38,4 +38,4 @@ def register():
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
