@@ -1,4 +1,4 @@
-
+There is no description of what the project is about.
 # DevOps Assignment 1
 
 This project is part of a DevOps assignment. It demonstrates the use of GitHub, Docker, Docker Compose, Redis, and Flask to build and deploy a simple web service with persistent storage and version control best practices.

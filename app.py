@@ -1,3 +1,5 @@
+# Nice and clean code, I like it!
+
 from flask import Flask, render_template, request, redirect, url_for, flash
 import redis
 
@@ -21,7 +23,7 @@ def login():
         return f"Welcome {username}!"
     else:
         flash('Invalid username or password', 'error')
-        return redirect(url_for('home'))
+        return redirect(url_for('home')) # Add a blank line before return
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -30,12 +32,12 @@ def register():
 
     if redis_client.hexists('users', username):
         flash('Username already exists!', 'error')
-        return redirect(url_for('home'))
+        return redirect(url_for('home')) # Add a blank line before return
 
     redis_client.hset('users', username, password)
 
     flash('Registration successful! Please log in.', 'success')
-    return redirect(url_for('home'))
+    return redirect(url_for('home')) # Add a blank line before return
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5080)
