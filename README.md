@@ -59,9 +59,6 @@ The web service will be accessible at: [http://localhost:5080](http://localhost:
 Redis data is stored persistently on the host machine using Docker volumes.  
 The data is saved under:
 
-```
-./data/redis
-```
 
 
 
